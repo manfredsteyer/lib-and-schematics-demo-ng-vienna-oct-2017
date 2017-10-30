@@ -1,0 +1,24 @@
+{
+  "name": "logger-schematic",
+  "version": "0.0.0",
+  "description": "A schematics",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && npm run copyToSample",
+    "test": "npm run build && jasmine **/*_spec.js",
+    "copyToSample": "xcopy *.* ..\\..\\application\\node_modules\\logger-schematic /s /e /EXCLUDE:blacklist.txt & REM Father forgive me for this DOS command ... ;-)"
+  },
+  "keywords": [
+    "schematics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "schematics": "./src/collection.json",
+  "dependencies": {
+    "@angular-devkit/core": "^0.0.15",
+    "@angular-devkit/schematics": "^0.0.25",
+    "@types/jasmine": "^2.6.0",
+    "@types/node": "^8.0.31",
+    "jasmine": "^2.8.0",
+    "typescript": "^2.5.2"
+  }
+}

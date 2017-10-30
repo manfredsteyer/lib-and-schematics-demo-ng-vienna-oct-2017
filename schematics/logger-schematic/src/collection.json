@@ -1,0 +1,10 @@
+{
+    "schematics": {
+      "log-formatter": {
+        "aliases": [ "lgfmt" ],
+        "factory": "./log-formatter",
+        "description": "Generates a log formatter",
+        "schema": "./log-formatter/schema.json"
+      }
+    }
+}
