@@ -29,7 +29,7 @@ export * from './token';
     SamplePipe
   ],
   providers: [
-    /* No Services! */
+    /* empty! */
   ],
   exports: [
     SampleComponent,

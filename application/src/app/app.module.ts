@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SampleModule, AbstractFormatterService } from 'my-lib';
+import { CustomLogFormatterService } from "./custom-log-formatter/custom-log-formatter.service";
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { SampleModule, AbstractFormatterService } from 'my-lib';
     BrowserModule
   ],
   providers: [
-    // { provide: AbstractFormatterService, useClass: CustomLogFormatterService}
+     { provide: AbstractFormatterService, useClass: CustomLogFormatterService}
   ],
   bootstrap: [AppComponent]
 })
